@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Mix - Playlist</title>
+    <link rel="stylesheet" href="playlistpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+EA5wzv7He9CeJd3GtF2i1d8bRUEIbbVYUew+OrCXaRkfj9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="search-container">
+            <a href="searchpage.html" class="search-icon">&#x1F50D;</a>
+        </div>
+        <nav class="navigation">
+            <button class="nav-item" data-target="home">HOME</button>
+            <button class="nav-item active" data-target="playlist">PLAYLIST</button>
+            <button class="nav-item" data-target="favourites">FAVOURITES</button>
+            <button class="nav-item" data-target="settings">SETTINGS</button>
+        </nav>
+        <div class="user-name" id="user-name-placeholder">USERNAME</div>
+    </div>
+
+    <div class="app-container">
+        <main>
+            <section class="playlist-creation">
+                <button id="create-playlist-button" class="btn primary">
+                    <span class="button-icon"></span>
+                    CREATE PLAYLIST
+                </button>
+                <div id="search-song-container" >
+                    <input type="text" id="search-song" placeholder="Search for songs..." class="input-text" style="display: none;">
+                </div>
+                <div id="playlist-details" style="display: none;">
+                    <input type="text" id="playlist-name" placeholder="Give your playlist a name..." class="input-text" style="display: none;">
+                </div>
+                <button id="confirm-playlist-button" style="display: none;" class="btn secondary">CONFIRM PLAYLIST</button>
+            </section>
+            <section class="playlist-container">
+                <h2>YOUR PLAYLISTS</h2>
+                <div class="playlists">
+                    <!-- Dynamically generated playlists would go here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Updated HTML for song list container -->
+    <div class="song-list-container" style="display: none;">
+        <div id="song-list">
+            <!-- Dynamically generated songs would go here -->
+        </div>
+    </div>
+    <div id="thumbnail-container"></div>
+
+    <!-- Add a container for selected songs -->
+    <div class="selected-songs-container" style="display: none;">
+        <h2>Your Songs:</h2>
+        <ul id="selected-songs-list">
+            <!-- Selected songs will be displayed here -->
+        </ul>
+        <button id="confirm-selected-songs-button" style="display: none;" class="btn secondary">CONFIRM PLAYLIST</button>
+    </div>
+    <!-- Updated HTML for the song added popup -->
+    <div class="popup" id="song-added-popup">
+        <div class="popup-content">
+            <span class="close-popup" id="close-song-added-popup">&times;</span>
+            <p>Song added successfully!</p>
+        </div>
+    </div>
+
+    
+    <script src="playlistpage.js"></script>
+
+</body>
+</html>

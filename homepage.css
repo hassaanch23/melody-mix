@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a1822;
+    overflow:  hidden;
+    overflow-y: auto;
+}
+
+.top-bar {
+    background-color: #0a1822;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Adjusted for space between elements */
+    align-items: center;
+}
+
+.search-icon {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.search-icon.active {
+  background-color: #0000ff; /* Blue background when active */
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #fee6c6;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.nav-item.active {
+    border-bottom: 3px solid #fee6c6;
+}
+
+
+.user-name {
+    color: white;
+}
+
+/* Add this CSS for the notification */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 255, 0, 0.7); /* Green background color */
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+}
+
+
+.main-content {
+    padding: 20px;
+    padding-top: 60px; /* Space for top bar */
+    color: #fee6c6;
+}
+
+.playback-controls {
+    display: flex;
+    align-items: center;
+}
+
+.playback-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.music-player-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Move to the right */
+    align-items: center;
+    margin-top: -25px;
+    margin-left: -270px; /* Adjust margin for positioning */
+}
+
+.music-player-box {
+    background: linear-gradient(to bottom, #85B6FF, black);
+    border-radius: 40px;
+    padding: 15px; /* Increase padding for a larger box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 350px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+}
+
+.progress-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 7px;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+    position: relative;
+  }
+  
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white; /* Change the color as needed */
+    border-radius: 5px;
+    width: 0;
+    transition: width 0.1 linear;
+  }
+  
+  
+  .progress-slider {
+    position: absolute;
+    top: -4px; /* Adjust the positioning as needed */
+    left: 0;
+    width: 10px; /* Adjust the width of the slider as desired */
+    height: 15px; /* Adjust the height of the slider as desired */
+    background-color: #ffff; /* Change the color as needed */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+
+.time-display {
+    color: #ffff;
+    font-size: 0.8em; /* Increase font size */
+}
+  
+.song-thumbnail {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+  
+.song-details {
+    color: white;
+    font-size: 1.2em; /* Increase font size */
+    margin-bottom: 15px; /* Add space between details and progress bar */
+}
+  
+.song-title {
+    display: block;
+    color: #ffff;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+  
+.song-artist {
+    display: block;
+    color: #ffff;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+  
+.song-controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+  margin-top: 20px;
+}
+  
+.control-btn {
+    background: none;
+    border: none;
+    color: #85B6FF;
+    font-size: 2em;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 7px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.play-pause-btn.paused {
+    background-color: #f44336; /* Red color when paused */
+    color: white; /* White color for the icon when paused */
+}
+
+.play-pause-btn-container {
+  position: relative;
+  display: inline-block;
+}
+
+.play-pause-btn {
+  
+  color: #85B6FF; /* White color for the icon when paused */
+  font-size: 2em;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.play-pause-btn.paused:hover::before {
+  content: "Press to Play"; /* Text to display */
+  /* Additional styling for the text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, #85B6FF, black);
+  color: black; /* Text color */
+  padding: 5px 10px; /* Adjust the padding as needed */
+  border-radius: 5px; /* Add rounded corners */
+  z-index: 1; /* Ensure the text is above the button */
+}
+
+/* Style for the play (resume) button */
+.play-pause-btn.playing {
+  background-color: #4CAF50; /* Green color when playing */
+}
+
+
+.like-btn {
+    background: none;
+    border:none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    
+}
+.like-btn:hover{
+  background-color: #f44336;
+}
+
+.like-btn.active {
+  color: red;
+}
+::-webkit-scrollbar {
+  width: 10px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #272525; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 20px; /* Rounded corners of the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.scrollbar:hover {
+  scrollbar-color: #555 #ddd;
+}
+
+.ms-scrollbar {
+  width: 10px;
+}
+
+.ms-scrollbar-track {
+  background: #020202;
+}
+
+.ms-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.ms-scrollbar-thumb:hover {
+  background: #555;
+}
+.lyrics-container {
+  background-color: #000;
+  color: rgb(252, 252, 252);
+  font-size: 1em;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  max-height: 90px;
+  overflow: auto; /* Add a scrollbar when content overflows vertically */
+}
+
+.lyrics-btn {
+  background: #fee6c6;
+  border: 2px solid #fee6c6;
+  color: black;
+  font-style:italic;
+  font-weight: bolder;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  margin-top: 25px; /* Space between the music box and the button */
+  display: block; /* This will ensure the button is not hidden */
+}
+
+.lyrics-btn:hover {
+  background-color:#FF9F6C;
+}
+
+.up-next-container {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #0a1822;
+    color: #ffff;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .up-next-container h3 {
+    color:#fee6c6;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+  
+  #up-next-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #up-next-list li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #0a1822;
+  }
+  
+  #up-next-list li:hover {
+    background-color: white;
+    color:white
+  }
+  
+  #up-next-list .up-next-item {
+    background: linear-gradient(to bottom, #85B6FF, black);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add space between items */
+  }
+  
+  .up-next-thumbnail {
+    width: 50px; /* Thumbnail size */
+    height: 50px; /* Thumbnail size */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between thumbnail and text */
+  }
+  
+  .up-next-text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .up-next-title {
+    font-weight: bold;
+    color: #ffff; /* Title color */
+  }
+  
+  .up-next-artist {
+    font-size: 0.8em;
+    color: #ffff; /* Artist name color */
+  }
+

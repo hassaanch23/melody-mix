@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melody Mix - Settings</title>
+  <link rel="stylesheet" href="1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+EA5wzv7He9CeJd3GtF2i1d8bRUEIbbVYUew+OrCXaRkfj9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="search-container">
+    <a href="searchpage.html" class="search-icon">&#x1F50D;</a>
+  </div>
+  <nav class="navigation">
+    <button class="nav-item" data-target="home">HOME</button>
+    <button class="nav-item" data-target="playlist">PLAYLIST</button>
+    <button class="nav-item" data-target="favourites">FAVOURITES</button>
+    <button class="nav-item active" data-target="settings">SETTINGS</button>
+</nav>
+  <div class="user-name" id="user-name-placeholder">USERNAME</div>
+</div>
+
+    <div class="container" id="settings-container">
+        <div class="sidebar">
+            <div class="settings-header">Settings</div>
+            <div class="menu-item" id="feedback-button" data-content="feedback-content">
+                <span class="icon">📝</span>Feedback
+            </div>
+            <div class="menu-item" id="help-tips-button" data-content="help-tips-content">
+                <span class="icon">💡</span>Help & Tips
+            </div>
+            <div class="menu-item" id="privacy-button" data-content="privacy-content">
+                <span class="icon">🔒</span>Privacy
+            </div>
+            <div class="menu-item" id="logout-button" data-content="logout-content">
+                <span class="icon">🚪</span>Log Out
+            </div>
+        </div>
+        
+        <div class="content" id="feedback-form">
+            <div class="form-container">
+                <div class="form-header">Feedback Form</div>
+
+                <form>
+                    <div class="form-question">
+                        <label for="question1">Question 1: Is the interface user-friendly?</label>
+                        <div class="form-options">
+                            <input type="radio" name="question1" id="q1Yes" value="Yes">
+                            <label for="q1Yes">Yes</label>
+
+                            <input type="radio" name="question1" id="q1No" value="No">
+                            <label for="q1No">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-question">
+                        <label for="question2">Question 2: Did you find the available selection of music genres and artists satisfying? </label>
+                        <div class="form-options">
+                            <input type="radio" name="question2" id="q2Yes" value="Yes">
+                            <label for="q2Yes">Yes</label>
+
+                            <input type="radio" name="question2" id="q2No" value="No">
+                            <label for="q2No">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-question">
+                        <label for="question3">Question 3: Overall, how would you rate the app's performance in providing a quality online music experience? </label>
+                        <div class="form-options">
+                            <input type="radio" name="question3" id="q3Yes" value="Yes">
+                            <label for="q3Yes">Good</label>
+
+                            <input type="radio" name="question3" id="q3No" value="No">
+                            <label for="q3No">Poor</label>
+                        </div>
+                    </div>
+
+                    <div class="form-question">
+                        <label for="question4">Question 4: Did you find the features and functionalities of the app helpful in enhancing your online music experience?  </label>
+                        <div class="form-options">
+                            <input type="radio" name="question4" id="q4Yes" value="Yes">
+                            <label for="q4Yes">Yes</label>
+
+                            <input type="radio" name="question4" id="q4No" value="No">
+                            <label for="q4No">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-question">
+                        <label for="question5">Question 5: Would you recommend our app to others?</label>
+                        <div class="form-options">
+                            <input type="radio" name="question5" id="q5Yes" value="Yes">
+                            <label for="q5Yes">Yes</label>
+
+                            <input type="radio" name="question5" id="q5No" value="No">
+                            <label for="q5No">No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-button-container">
+                        <button class="form-button" type="submit">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="help-tips-content">
+        <div class="help-tips-container">
+            <div class="help-tips-header">Help & Tips</div>
+            <div class="help-tips-content">
+                <!-- Wrap each set of tips under different headings and add space between lines -->
+                <p><strong>Getting Started:</strong></p>
+                <p>1. Play and Pause: Click the play button to start playback and pause to stop.</p>
+                <p>2. Volume Control: Adjust the volume using your device's volume controls.</p>
+
+                <p><strong>Navigation:</strong></p>
+                <p>3. Browse Music: Explore your library by clicking on the tabs like "Playlists."</p>
+                <p>4. Search: Use the search bar to find specific songs, artists, or albums quickly.</p>
+
+                <p><strong> Playback Controls:</strong></p>
+                <p>5.	Repeat: Enable repeat mode to play a single track or playlist on loop.</p>
+                <p>6.	Shuffle: Click the shuffle button to play songs in random order.</p>
+
+                <p><strong>Account and Settings:</strong></p>
+                <p>7.	User Account: Create an account to save playlists and preferences.</p>
+                <p>8.	Settings: Customize your experience by adjusting playback settings, and more in the settings menu.</p>
+
+                <p><strong>Troubleshooting:</strong></p>
+                <p>9.	No Sound: If you experience no sound, check your device's volume settings, and ensure your speakers or headphones are connected.</p>
+                <p>10.	Browser Compatibility: Make sure you're using a supported browser for the best experience. We recommend the latest versions of Chrome, Firefox, Safari, or Edge.</p>
+                
+                <p><strong>FAQs:</strong></p>
+                <p>11.	How do I create a playlist? - Visit the "Playlists" section and click "Create New Playlist."</p>
+                
+                <p><strong>Contact Support:</strong></p>
+                <p>12.	Need Help? - For further assistance or technical issues, contact our support team at melodymix@gmail.com.</p>
+
+                <p><strong>Tips and Tricks:</strong></p>
+                <p>13. Organize Your Library: Create playlists and categorize your music for easy access.</p>
+                <p>14. Discover New Music: Explore the "Suggested (home)" section to discover new tracks based on your listening history.</p>
+            </div>
+        </div>
+    </div>
+        <!-- Logout Confirmation Dialog -->
+        <div id="message-dialog" class="message-dialog" style="display: none;">
+            <div class="message-content">
+                <p id="message-text">Are you sure you want to log out?</p>
+                <button id="message-confirm" class="message-button">Yes</button>
+                <button id="message-cancel" class="message-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript files -->
+    <script src="1.js"></script>
+</body>
+</html>

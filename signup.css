@@ -1,0 +1,108 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .bg-image {
+    background-image: url('background.jpeg'); /* Change this path to your actual image path */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  
+  .bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    color: #ffffff;
+  }
+  
+  .signup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    width: auto; /* Adjust width automatically based on content */
+    max-width: 600px; /* Increased max width for larger screens */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); /* Optional: Add shadow for depth */
+  }
+  
+  h2 {
+    color: #fee6c6;
+    margin-bottom: 20px; /* Add some space below the title */
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between; /* Aligns items in a row with space between */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px; /* Provides space between items */
+    margin-bottom: 20px; /* Space below each form group */
+  }
+  
+  .input-field {
+    flex: 1; /* Allows the input fields to grow and take available space */
+    min-width: 140px; /* Minimum width for smaller screens */
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .create-account-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fee6c6; 
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .login-btn {
+    background-color: #fee6c6; /* Light pink */
+    border: none;
+    border-radius: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-left: 10px;
+    outline: none;
+  }
+  .create-account-btn:hover{
+    background-color: #FF9F6C;
+  }
+  .login-btn:hover{
+    background-color: #FF9F6C;
+  }

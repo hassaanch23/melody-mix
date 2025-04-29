@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melody Mix - Home</title>
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+EA5wzv7He9CeJd3GtF2i1d8bRUEIbbVYUew+OrCXaRkfj9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="search-container">
+    <a href="searchpage.html" class="search-icon">&#x1F50D;</a>
+  </div>
+  <nav class="navigation">
+    <button class="nav-item active" data-target="home">HOME</button>
+    <button class="nav-item" data-target="playlist">PLAYLIST</button>
+    <button class="nav-item" data-target="favourites">FAVOURITES</button>
+    <button class="nav-item" data-target="settings">SETTINGS</button>
+</nav>
+  <div class="user-name" id="user-name-placeholder">USERNAME</div>
+</div>
+
+<div class="main-content" id="content-home">
+  <h2>Suggested Songs</h2>
+</div>
+
+<div class="main-content" id="content-playlist" style="display: none;">
+  <!-- Content for the Playlist page will be loaded here -->
+</div>
+
+<div class="main-content" id="content-favourites" style="display: none;">
+  <!-- Content for the Favourites page will be loaded here -->
+</div>
+
+<div class="main-content" id="content-settings" style="display: none;">
+  <!-- Content for the Settings page will be loaded here -->
+</div>
+
+<div class="music-player-container">
+  <div class="music-player-box">
+    <div class="music-info">
+      <img src="Tu Hai Kahan.jpeg" alt="Song Thumbnail" class="song-thumbnail">
+      <div class="song-details">
+        <span class="song-title">Tu Hai Kahan</span>
+        <span class="song-artist">AUR</span>
+      </div>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar">
+          <div class="progress"></div>
+          <div class="progress-slider" id="progress-slider"></div>
+        </div>
+      </div>
+      
+                  
+    <div class="time-display">
+      <span class="current-time">0:00</span> / <span class="total-time">0:00</span>
+    </div>
+    <div class="controls-container">
+      <button class="control-btn prev-btn"><i class="fas fa-backward"></i></button>
+      <button class="control-btn play-pause-btn"><i class="fas fa-play"></i></button>
+      <button class="control-btn next-btn"><i class="fas fa-forward"></i></button>
+      <button class="control-btn like-btn"><i class="fas fa-heart"></i></button>
+    </div>
+  </div>
+  
+  <button class="lyrics-btn">Lyrics</button>
+  <br>
+  <div class="lyrics-container">
+  </div>
+</div>
+
+
+<div class="up-next-container">
+    <h3>Up Next</h3>
+    <ul id="up-next-list">
+      <!-- Up Next songs will be added here by JavaScript -->
+    </ul>
+  </div>
+
+<audio id="audio-player" src="Tu Hai Kahan.mp3" type="audio/mpeg" hidden></audio>
+
+<script src="homepage.js"></script>
+</body>
+</html>

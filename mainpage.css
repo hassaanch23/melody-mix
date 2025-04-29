@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Added to prevent scrolling on blur */
+  }
+  
+  .bg-image {
+    background-image: url('background.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    
+  }
+
+  .bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .bg-text {
+    background: none; /* Remove background color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: -600px; /* Adjust to move the logo up or down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the logo text appears above the shaded oval */
+  }
+
+  .logo-text {
+    color: #FF9F6C;
+    font-weight: bold;
+    font-style: italic; /* Add italic style */
+    font-size: 56px;
+    position: relative;
+    background-color: rgba(6, 8, 3, 0.2); 
+    padding: 10px; /* Add padding to create spacing between text and background */
+    border-radius: 10px; /* Add border radius for rounded corners */
+  }
+
+  .get-started-link {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+  .get-started-button {
+    border: none;
+    outline: none;
+    padding: 16px 64px; /* Increase button padding */
+    background-color: #fee6c6; /* Set button background color */
+    color: FF9F6C; /* Set text color to white */
+    cursor: pointer;
+    text-align: center;
+    border-radius: 20px; /* Adjust for an oval shape */
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the button text bold */
+    position: absolute;
+    bottom: 20px; /* Adjust the bottom position */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .get-started-button:hover 
+  {
+    background-color: #FF9F6C ; /* Lighter color on hover */
+  }

@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a1822;
+    overflow:  hidden;
+    overflow-y: auto;
+}
+
+.top-bar {
+    background-color: #0a1822;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Adjusted for space between elements */
+    align-items: center;
+}
+
+.search-icon {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.search-icon.active {
+  background-color: #0000ff; /* Blue background when active */
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #fee6c6;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.nav-item.active {
+    border-bottom: 3px solid #fee6c6;
+}
+
+
+.user-name {
+    color: white;
+}
+
+/* Layout containers */
+.container {
+    display: flex;
+    flex-direction: row-reverse; /* Moves the sidebar to the right */
+    height: 100%;
+}
+
+
+
+.sidebar {
+    background-color: #2C3E50;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-header {
+    font-size: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #34495E;
+}
+
+.menu-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #34495E;
+    cursor: pointer;
+}
+
+.menu-item .icon {
+    margin-right: 10px; /* Changed from margin-left to margin-right */
+}
+
+.menu-item.active,
+.menu-item.feedback { /* Underline for the feedback menu item */
+    background-color: #34495E;
+    text-decoration: underline;
+}
+
+/* Content styling */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ECF0F1;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-header {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Form question styling */
+.form-question {
+    margin-bottom: 20px;
+}
+
+.form-options {
+    display: flex;
+    margin-top: 10px;
+}
+
+.form-options input[type="radio"]:first-child {
+    margin-right: 20px; /* Increased space between 'Yes' and 'No' */
+}
+
+.form-options label {
+    margin-right: 10px;
+}
+
+/* Button styling */
+.form-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-button {
+    width: 100%;
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background-color: #2980B9;
+}
+
+.message-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.message-button:hover {
+    background-color: #2980b9;
+}

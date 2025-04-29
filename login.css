@@ -1,0 +1,112 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Added to prevent scrolling on blur */
+  }
+  
+  .bg-image {
+    background-image: url('background.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  
+  .bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    color: #ffffff;
+  }
+  
+  .signup-text {
+    margin-right: 10px;
+  }
+  
+  .signup-btn {
+    padding: 10px 20px;
+    background-color: #fee6c6; 
+    border-radius: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    width: 300px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fee6c6; /* Light Pink color */
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #popup {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+    margin-top: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+  }
+  .login-btn:hover{
+    background-color:#FF9F6C ;
+  }
+  .signup-btn:hover{
+    background-color: #FF9F6C;
+  }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Mix - Search</title>
+    <link rel="stylesheet" href="searchpage.css">
+</head>
+<body>
+  
+
+    <div class="top-bar">
+        <div class="search-container">
+          <a href="searchpage.html" class="search-icon active">&#x1F50D;</a>
+        </div>
+        <nav class="navigation">
+          <button class="nav-item" data-target="home">HOME</button>
+    <button class="nav-item" data-target="playlist">PLAYLIST</button>
+    <button class="nav-item " data-target="favourites">FAVOURITES</button>
+    <button class="nav-item" data-target="settings">SETTINGS</button>        
+
+        </nav>
+        <div class="user-name" id="user-name-placeholder">USERNAME</div>
+    </div>
+
+    <div class="main-content">
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="What do you want to listen to?" autofocus>
+    </div>
+    
+    <h2 class="search-label">Recent Searches</h2>
+    <ul id="recent-search-list" class="search-list"></ul>
+    
+    <!-- Added an id for the search results heading -->
+    <h2 id="search-results-heading" class="search-label" style="display: none;">Search Results</h2>
+    <ul id="search-results" class="search-list"></ul>
+    </div>
+
+    
+
+    
+
+
+<script src="searchpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a1822;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.top-bar {
+    background-color: #0a1822;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-icon {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.search-icon.active {
+    background: linear-gradient(to bottom, #85B6FF, black);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #fee6c6;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.search-label {
+    color: #fee6c6;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search-label1 {
+    color: #fee6c6;
+    margin-left: 200px;
+}
+
+.search-container {
+    color: #fee6c6;
+    display: flex;
+    align-items: center;
+}
+
+.search-results-container {
+    text-align: center;
+}
+
+.user-name {
+    margin-left: auto;
+    color: white;
+    padding-left: 20px;
+}
+
+#search-input, .search-list, #search-results {
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    color: #333;
+    margin-left: 20%;
+}
+
+#search-input{
+    background-color: #fee6c6;
+}
+
+.main-content {
+    color: #fee6c6;
+    padding: 20px;
+}
+
+#recent-search-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#recent-search-list li, #search-results li {
+    background: linear-gradient(to bottom, #85B6FF, #000);
+    color: black;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px;
+}
+
+#recent-search-list li:hover, #search-results li:hover {
+    background-color: white;
+}
+
+#recent-search-list li span {
+    display: block;
+}
+
+.search-list-visible {
+    display: block;
+}
+
+#recent-search-list li img, #search-results li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.search-list .song-info, #search-results .song-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.search-list .song-info .song-title, #search-results .song-info .song-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.search-list .song-info .artist-name, #search-results.song-info .artist-name {
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+

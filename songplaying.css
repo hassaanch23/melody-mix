@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a1822;
+    overflow:  hidden;
+}
+
+.bg-image {
+    background-image: url('background.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  
+  .bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+.playback-controls {
+    display: flex;
+    align-items: center;
+}
+
+.playback-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.music-player-container {
+   
+    justify-content: flex-start; /* Move to the right */
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 600px; /* Adjust margin for positioning */
+}
+
+.music-player-box {
+    background: linear-gradient(to top, #87b3d1, #000);
+    border-radius: 40px;
+    padding: 15px; /* Increase padding for a larger box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 350px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+}
+
+.progress-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 7px;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+    position: relative;
+  }
+  
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white; /* Change the color as needed */
+    border-radius: 5px;
+    width: 0;
+    transition: width 0.1 linear;
+  }
+  
+  
+  .progress-slider {
+    position: absolute;
+    top: -4px; /* Adjust the positioning as needed */
+    left: 0;
+    width: 10px; /* Adjust the width of the slider as desired */
+    height: 15px; /* Adjust the height of the slider as desired */
+    background-color: #ffff; /* Change the color as needed */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+
+.time-display {
+    color: #ffff;
+    font-size: 0.8em; /* Increase font size */
+}
+  
+.song-thumbnail {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+  
+.song-details {
+    color: white;
+    font-size: 1.2em; /* Increase font size */
+    margin-bottom: 15px; /* Add space between details and progress bar */
+}
+  
+.song-title {
+    display: block;
+    color: #ffff;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+  
+.song-artist {
+    display: block;
+    color: #ffff;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+  
+.song-controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.control-btn {
+  display: block;
+  background: none;
+  border: hidden;
+  color: #0a1822;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px; /* Center the button */
+  padding: 5px 10px; /* Adjust padding as needed */
+  transition: background-color 0.3s;
+  width: 40px; /* Equal width and height for a circle */
+  height: 40px; /* Equal width and height for a circle */
+  text-align: center; /* Center the text inside the button */
+  line-height: 20px; /* Adjust line height to vertically center the text */
+  margin-bottom: 5px;
+  border-radius: 30px;
+}
+
+
+
+
+.play-pause-btn.paused {
+    background-color: #f44336; /* Red color when paused */
+    color: white; /* White color for the icon when paused */
+}
+
+/* Style for the play (resume) button */
+.play-pause-btn.playing {
+    background-color: #4CAF50; /* Green color when playing */
+    color: white; /* White color for the icon when playing */
+}
+
+.like-btn {
+    background: none;
+    border:none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.like-btn.active {
+    color: red; /* Change color to red when active (liked) */
+}
+  
+.lyrics-container {
+  color: white;
+  font-size: 1em;
+}
+  
+.lyrics-btn {
+  background: #fee6c6;
+  width: 100px;
+  color: black;
+  font-style:italic;
+  font-weight: bolder;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  border-radius: 20px;
+  margin-top: 0px; /* Add space between the control box and the lyrics button */
+  display: block; /* Ensure the button takes up the full width */
+  margin-left: 125px; /* Align the button to the right */
+  margin-top:30px;
+
+}
+  
+.lyrics-btn:hover {
+  background-color: #fee6c6;
+  color: black;
+}
+
+.back-btn-container {
+    position: fixed; /* Or any other positioning as needed */
+    top: 20px;
+    left: 20px;
+  }
+  
+  .back-btn {
+    background-color: #fee6c6;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+  }

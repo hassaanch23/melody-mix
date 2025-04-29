@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melody Mix - Login</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="bg-overlay">
+  <header>
+    <div class="top-right">
+      <span class="signup-text">Don't have an account?</span>
+      <button class="signup-btn" onclick="redirectToSignUp()">SIGN UP</button>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Email/Username:</label>
+        <input type="text" id="username" class="input-field" placeholder="Enter Username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
+      </div>
+      <button type="submit" class="login-btn">LOG IN</button>
+    </form>
+  </main>
+</div>
+
+<div id="popup" class="popup-message"></div>
+
+<script src="login.js"></script>
+
+</body>
+</html>

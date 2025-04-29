@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a1822;
+    overflow:  hidden;
+    overflow-y: auto;
+}
+
+.top-bar {
+    background-color: #0a1822;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Adjusted for space between elements */
+    align-items: center;
+}
+
+.search-icon {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.search-icon.active {
+  background-color: #0000ff; /* Blue background when active */
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #fee6c6;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.nav-item.active {
+    border-bottom: 3px solid #fee6c6;
+}
+
+.user-name {
+    color: white;
+}
+
+main {
+    background-color: #0a1822;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Playlist creation styles */
+.playlist-creation {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 20px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+/* Initial style for the search bar */
+
+
+.primary {
+    background-color: #FEE6C6; /* Coral */
+    color: #070000;
+    margin-bottom: 40px;
+}
+
+.primary:hover {
+    background-color: white; /* Darker Coral */
+    margin-bottom: 40px;
+}
+#search-song {
+    margin-top: 20px; /* Adjust the value to change the vertical position */
+}
+
+.secondary {
+    background-color: #FEE6C6; /* Turquoise */
+    color: #000000;
+    margin-top: 50px;
+    margin-left: 580px;
+    
+}
+
+.secondary:hover {
+    background-color: #FF9F6C; /* Darker Turquoise */
+    
+   
+}
+
+
+.input-text {
+    width: 90%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 80px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.input-text::placeholder {
+    color: #999;
+}
+
+.input-text:focus {
+    background-color: #f0f0f0; /* Light background on focus */
+    color: #333;
+    outline: none;
+}
+
+/* Container for the Playlists and the Heading */
+.playlist-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 60%;
+    background-color: #0a1822;
+    color: #fbfbfb;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Style for Individual Playlist */
+.playlist {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #85B6FF;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Style for the "Your Playlists" Heading */
+.playlist-heading {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed */
+    /* Add other styling as needed */
+}
+
+
+.playlist:hover {
+    background-color: #85B6FF;
+}
+
+/* Updated Song List Container Styles */
+.song-list-container {
+    width: 60%;
+    background-color: #0a1822;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 300px;
+}
+
+/* Style for Individual Song */
+.song {
+    background: #85B6FF;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.song:hover {
+    background-color: rgb(178, 178, 176);
+}
+
+/* Updated Selected Songs Container Styles */
+.selected-songs-container {
+    width: 60%;
+    margin-left: 300px;
+    background-color: #85B6FF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style for Individual Selected Song */
+.selected-song {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.selected-song:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* CSS for the song added popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FF9F6C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 500px; /* Adjust width as needed */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+.btn.primary {
+    background-color: #FEE6C6; /* Coral */
+    color: #070000;
+    position: relative; /* Position relative for the button */
+}
+.btn.primary:hover{
+    background-color: #FF9F6C;
+}
+
+/* Style for the button icon */
+.button-icon {
+    position: absolute;
+    left: 10px; /* Adjust the left position as needed */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%);
+    width: 35px; /* Set the width of the icon */
+    height: 35px; /*     Set the height of the icon */
+    background: url('tape.jpg') no-repeat center center; /* Set the background image URL */
+    background-size: cover; /* Adjust background size as needed */
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+.song-thumbnail {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    margin-right: 100px; /* Optional margin to separate the image from the text */
+}
+
+
+
